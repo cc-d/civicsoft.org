@@ -20,7 +20,7 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 
 $messages_file = '../messages/messages.json';
 
-if (!(file_exists($messages_file))) {#($fh) {
+if (!(file_exists($messages_file))) {
     $new_file = True;
     $fh = fopen($messages_file, 'w') or die ('Unable to fopen messages.json with mode w for creation.');
     // Smallest possible valid json.
